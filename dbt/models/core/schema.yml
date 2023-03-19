@@ -1,0 +1,86 @@
+
+version: 2
+
+models:
+    - name: circle_power_usage
+      description: >
+        This dataset provides information about the Domestic consumption of electrical energy in the Northern part of Telangana from Jan 2019 to FEB 2023 aggregated by Circle i.e., district for each year.
+       
+      columns:
+          - name: Circle
+            description: "Circle/District within the Northen part of Telangana"
+            tests:
+                - not_null
+
+          - name: Year
+            description: "Year"
+            tests:
+                - not_null
+          
+          - name: Total_services
+            description: "Total number of aggregated connections per Circle in each Year "
+           
+          - name: Billed_services
+            description: "Total number of aggregated connections billed per Circle in each Year "
+          
+          - name: Units_consumed
+            description: "Total number of aggregated units consumed per Circle in each Year"
+            
+          - name: Load_consumed
+            description: "Total number of aggregated Load consumed per Circle in each Year"
+
+    - name: seasonal_power_usage
+      description: >
+        This dataset provides information about the Domestic consumption of electrical energy in the Northern part of Telangana from Jan 2019 to FEB 2023 aggregated by Season for each year.
+       
+      columns:
+          - name: Season
+            description: "Seasons in the Northen part of Telangana, valid values are Winter, Spring, Summer, Monsoon, Early Autumn, Late Autumn "
+            tests:
+                - accepted_values:
+                    values: ['Winter', 'Spring', 'Summer', 'Monsoon', 'Early Autumn', 'Late Autumn']
+          
+          - name: Total_services
+            description: "Total number of aggregated connections per Circle in each Year "
+           
+          - name: Billed_services
+            description: "Total number of aggregated connections billed per Circle in each Year "
+          
+          - name: Units_consumed
+            description: "Total number of aggregated units consumed per Circle in each Year"
+            
+          - name: Load_consumed
+            description: "Total number of aggregated Load consumed per Circle in each Year"
+    
+    - name: circle_seasonal_power_usage
+      description: >
+        This dataset provides information about the Domestic consumption of electrical energy in the Northern part of Telangana from Jan 2019 to FEB 2023 aggregated by Circle i.e., district, and Season for each year.
+       
+      columns:
+          - name: Circle
+            description: "Circle/District within the Northen part of Telangana"
+            tests:
+                - not_null
+          
+          - name: Season
+            description: "Seasons in the Northen part of Telangana, valid values are Winter, Spring, Summer, Monsoon, Early Autumn, Late Autumn "
+            tests:
+                - accepted_values:
+                    values: ['Winter', 'Spring', 'Summer', 'Monsoon', 'Early Autumn', 'Late Autumn']
+
+          - name: Year
+            description: "Year"
+            tests:
+                - not_null
+          
+          - name: Total_services
+            description: "Total number of aggregated connections per Circle and Season in each Year "
+           
+          - name: Billed_services
+            description: "Total number of aggregated connections billed per Circle and Season in each Year "
+          
+          - name: Units_consumed
+            description: "Total number of aggregated units consumed per Circle and Season in each Year"
+            
+          - name: Load_consumed
+            description: "Total number of aggregated Load consumed per Circle and Season in each Year"
