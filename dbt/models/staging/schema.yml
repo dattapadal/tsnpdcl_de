@@ -1,0 +1,64 @@
+
+version: 2
+
+sources:
+  - name: staging
+    database: tsnpdcl-zoomcamp
+    schema: tsnpdcl_BQ_raw
+    tables:
+      - name: tsnpdcl
+
+
+models:
+    - name: stg_tsnpdcl
+      description: >
+        This dataset provides information about the Domestic consumption of electrical energy in the Northern part of Telangana from Jan 2019 to FEB 2023.
+        Granularity: Area Level
+        Frequency: Monthly
+      columns:
+          - name: Circle
+            description: "Circle/District within the Northen part of Telangana"
+            tests:
+                - not_null
+
+          - name: Division
+            description: "Division within the District"
+            tests:
+                - not_null
+          
+          - name: Subdivision
+            description: "Subdivision within the Division"
+            tests:
+                - not_null
+          
+          - name: Section
+            description: "Section within the Subdivision"
+            tests:
+                - not_null
+
+          - name: Area
+            description: "Area within the Section"
+            tests:
+                - not_null
+          
+          - name: catcode
+            description: "Category Code (Code for connection Type). 1 for Domestic"
+            tests:
+                - not_null
+
+          - name: catdesc
+            description: "Category Description. For example 'Domestic', 'Industrial' etc., "
+            tests:
+                - not_null
+          
+          - name: totservices
+            description: "Number of connections during the month "
+           
+          - name: BilledServices
+            description: "Number of connections billed during the month"
+          
+          - name: Units
+            description: "It will give details of units billed in a month"
+            
+          - name: Load
+            description: "It will give details of load billed in a month"
