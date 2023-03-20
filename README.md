@@ -174,6 +174,7 @@ The above deployments download csv data from kaggle and stores it into GCS bucke
  ## Dashboard
 
 Below is the final [dashboard](https://lookerstudio.google.com/s/pPae5bMmgq4)
-![Dashboard](/images/TSNPDCL_Power_consumption_-_DE_project.pdf)
+
+![Dashboard_pdf_link](/images/TSNPDCL_Power_consumption_-_DE_project.pdf)
 
 **A special thank you to [DataTalks.Club](https://datatalks.club) for providing this incredible course! Also, thank you to the amazing slack community!**
