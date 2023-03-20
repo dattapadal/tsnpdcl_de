@@ -5,7 +5,11 @@
 This repository contains my project for the completion of [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) by [DataTalks.Club](https://datatalks.club).
 
 ### Index
-
+- [Problem Description](#problem-description)
+- [Dataset](#dataset)
+- [Technologies Used](#technologies-used)
+- [Steps for Project Reproduction](#steps-for-project-reproduction)
+- [Dashboard](#dashboard)
 ## Problem Description
 The Northern Power Distribution Company of Telangana (TSNPDCL) is the electricity distribution company owned by the government of Telangana for the 18 northern districts of Telangana. 
 The purpose of this basic project is to analyze domestic power consumption of Telangana State Norther districts from Jan 2019 to Feb 2023 and understand the consumption patterns across different seasons for the last four years. 
@@ -167,6 +171,9 @@ The above deployments download csv data from kaggle and stores it into GCS bucke
 
  * Connect the final BigQuery dataset from above inside lookerstudio and start creating the dashboard with insights. 
  
- 
+ ## Dashboard
+
+Below is the final [dashboard](https://lookerstudio.google.com/s/pPae5bMmgq4)
+![Dashboard](/images/TSNPDCL_Power_consumption_-_DE_project.pdf)
 
 **A special thank you to [DataTalks.Club](https://datatalks.club) for providing this incredible course! Also, thank you to the amazing slack community!**
